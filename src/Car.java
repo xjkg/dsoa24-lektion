@@ -1,14 +1,9 @@
-public class Car {
-    private String name;    //deklarerar instansvariabeln name
+public class Car extends Vehicle {
 
     public Car(String name){
-        this.name = name; //this.name hänvisar till instansvariabeln, name är parameter
+        super.name = name; //this.name hänvisar till instansvariabeln, name är parameter
+        super.type = "Motor";
     }
-    public String getName(){
-        return name; //this krävs inte eftersom den tidigare parametern inte är tillgänglig här
-    }
-    public void setName(String name) {
-        this.name = name;
-    }
+
 
 }

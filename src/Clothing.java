@@ -1,4 +1,4 @@
-public class Clothing {
+abstract class Clothing {
     public String name;
     public String brand;
     public String color;
@@ -33,4 +33,6 @@ public class Clothing {
     public void setPrice(String price) {
         this.price = price;
     }
+
+    abstract void mend();
 }

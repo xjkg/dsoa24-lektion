@@ -1,6 +1,10 @@
 public class Bike extends Vehicle {
     public Bike(String name) {
-        super.name = name;
-        super.type = "Pedal";
+        super(name, "Pedal");
     }
+    @Override
+    public void soundWarning(){
+        System.out.println("*Bell*");
+    }
+
 }

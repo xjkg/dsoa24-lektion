@@ -1,6 +1,17 @@
 public class Vehicle {
-    public String name;    //deklarerar instansvariabeln name
-    public String type;
+
+    private String name;    //deklarerar instansvariabeln name
+    private String type;
+
+    public void soundWarning(){
+        System.out.println("*Default Sound*");
+    }
+
+    public Vehicle(String name, String type) {
+        this.name = name;
+        this.type = type;
+    }
+
     public String getName(){
         return name; //this krävs inte eftersom den tidigare parametern inte är tillgänglig här
     }
@@ -12,7 +23,7 @@ public class Vehicle {
         return type;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public double getPrice() {
+        return 0;
     }
 }

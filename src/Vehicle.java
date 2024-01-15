@@ -2,7 +2,7 @@ public class Vehicle {
 
     private String name;    //deklarerar instansvariabeln name
     private String type;
-
+    public double price;
     public void soundWarning(){
         System.out.println("*Default Sound*");
     }
@@ -24,6 +24,10 @@ public class Vehicle {
     }
 
     public double getPrice() {
-        return 0;
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
     }
 }

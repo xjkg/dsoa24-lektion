@@ -2,7 +2,7 @@ abstract class Clothing {
     public String name;
     public String brand;
     public String color;
-    public String price;
+    public double price;
 
     public String getName(){
         return name;
@@ -16,7 +16,7 @@ abstract class Clothing {
         return color;
     }
 
-    public String getPrice() {
+    public double getPrice() {
         return price;
     }
     public void setName(String name) {
@@ -30,7 +30,7 @@ abstract class Clothing {
         this.color = color;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 

@@ -1,11 +1,11 @@
-public class Shirt extends Clothing{
-    public Shirt(String brand, String price, String color) {
+public class Shirt extends Clothing implements ShopFeatures{
+    public Shirt(String brand, double price, String color) {
         super.brand = brand;
         super.price = price;
         super.color = color;
 
     }
-    public Shirt(String brand, String price) {
+    public Shirt(String brand, double price) {
         super.brand = brand;
         super.price = price;
         super.color = "default";
@@ -13,7 +13,7 @@ public class Shirt extends Clothing{
     }
     public Shirt(String brand) {
         super.brand = brand;
-        super.price = "0€";
+        super.price = 0;
         super.color = "default";
     }
     public Shirt() {
@@ -24,4 +24,12 @@ public class Shirt extends Clothing{
     void mend() {
         System.out.println("Shirt is mended");
     }
+
+    @Override
+    public String getProductNumber() {
+        return null;
+    }
+
+
+
 }

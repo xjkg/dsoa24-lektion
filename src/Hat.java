@@ -1,11 +1,11 @@
 public class Hat extends Clothing {
-    public Hat(String brand, String price, String color) {
+    public Hat(String brand, double price, String color) {
         super.brand = brand;
         super.price = price;
         super.color = color;
 
     }
-    public Hat(String brand, String price) {
+    public Hat(String brand, double price) {
         super.brand = brand;
         super.price = price;
         super.color = "default";
@@ -13,7 +13,7 @@ public class Hat extends Clothing {
     }
     public Hat(String brand) {
         super.brand = brand;
-        super.price = "0€";
+        super.price = 0;
         super.color = "default";
     }
     public Hat() {

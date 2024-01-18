@@ -1,10 +1,12 @@
 public class Calculator {
     double result;
-    public void  multiply(double a, double b) {
+    public double  multiply(double a, double b) {
         result = a*b;
+        return result;
     }
-    public void multiply(double a, double b, double c) {
+    public double multiply(double a, double b, double c) {
         result = a*b*c;
+        return result;
     }
 
     public double getResult() {

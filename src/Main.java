@@ -1,12 +1,36 @@
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.HashMap;
+import java.util.InputMismatchException;
+import java.util.Random;
+import java.util.Scanner;
 
 public class Main {
     //konstant skapas med static final
     static final double GAME_VERSION = 1.0;
+
     public static void main(String[] args) {
+        Random random = new Random();
+        Scanner intInput = new Scanner(System.in);
+        Scanner strInput = new Scanner(System.in);
+        Calculator calc = new Calculator();
+
+        System.out.printf("Slumptal: %d", random.nextInt(1, 100));
+        System.out.printf("\nenter för ett nytt tal, Q för att avsluta");
+
+        while (true) {
+            String hmnInput = strInput.nextLine();
+                if (hmnInput.equals("q")) {
+                    System.exit(0);
+                    break;
+                }else if (hmnInput.equals("")) {
+                    System.out.printf("Slumptal: %d", random.nextInt(1, 100));
+                    System.out.printf("\nenter för ett nytt tal, Q för att avsluta");
+                }
+        }
+
         //default constructor
         Foo foo = new Foo();
-
 
         Bike bike = new Bike("Jopo", 300);
         BikeShop bikeShop = new BikeShop();

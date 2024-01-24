@@ -10,10 +10,14 @@ public class Main {
     static final double GAME_VERSION = 1.0;
 
     public static void main(String[] args) {
+        int myInt = Utils.getIntInput("Skriv ett heltal");
+
+        /*
         Random random = new Random();
         Scanner intInput = new Scanner(System.in);
         Scanner strInput = new Scanner(System.in);
         Calculator calc = new Calculator();
+
 
         System.out.printf("Slumptal: %d", random.nextInt(1, 100));
         System.out.printf("\nenter för ett nytt tal, Q för att avsluta");
@@ -95,6 +99,6 @@ public class Main {
 
         System.out.printf("Kalle kör en %s, och Lisa kör en %s\n",
                 drivers.get("kalle").getName(),
-                drivers.get("lisa").getName());
+                drivers.get("lisa").getName()); */
     }
 }

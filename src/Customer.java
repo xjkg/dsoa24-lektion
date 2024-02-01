@@ -8,10 +8,10 @@ public class Customer implements Serializable {
         this.funds = funds;
     }
     public void buyBike(Bike bike){
-        if (funds< bike.getPrice()){
+        if (funds< bike.getNetPrice()){
             System.out.println("Du har inte råd med cykeln");
         }else {
-            setFunds(funds- bike.getPrice());
+            setFunds(funds- bike.getNetPrice());
             currentBike = bike;
         }
 

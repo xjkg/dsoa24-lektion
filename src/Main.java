@@ -43,10 +43,10 @@ public class Main {
         //default constructor Foo foo = new Foo();
 
 
-        Bike bike = new Bike("Jopo", 300);
+        Bike bike = new Bike("Jopo", 300, DiscountCategory.DEMO);
         BikeShop bikeShop = new BikeShop();
         bikeShop.addBike(bike);
-        bikeShop.addBike(new Bike("Harley", 1500));
+        bikeShop.addBike(new Bike("Harley", 1500, DiscountCategory.RETURNED));
         for (int i = 0; i < bikeShop.getBikes().size() ; i++) {
             System.out.printf("%d %s %.2f €\n",
                     i,

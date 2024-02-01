@@ -1,5 +1,6 @@
 import org.w3c.dom.ls.LSOutput;
 
+import java.io.File;
 import java.util.HashMap;
 import java.util.InputMismatchException;
 import java.util.Random;
@@ -10,9 +11,16 @@ public class Main {
     static final double GAME_VERSION = 1.0;
 
     public static void main(String[] args) {
-        int myInt = Utils.getIntInput("Skriv ett heltal");
+
+        FileUtils.writeTextFile("hello.txt", "hello!");
+        String fileContent = FileUtils.readTextFile("hello.txt");
+
+        System.out.println(fileContent);
+
 
         /*
+        int myInt = Utils.getIntInput("Skriv ett heltal");
+
         Random random = new Random();
         Scanner intInput = new Scanner(System.in);
         Scanner strInput = new Scanner(System.in);

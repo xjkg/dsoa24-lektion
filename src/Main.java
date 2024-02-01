@@ -11,14 +11,13 @@ public class Main {
     static final double GAME_VERSION = 1.0;
 
     public static void main(String[] args) {
-
+/*
         FileUtils.writeTextFile("hello.txt", "hello!");
         String fileContent = FileUtils.readTextFile("hello.txt");
 
         System.out.println(fileContent);
 
 
-        /*
         int myInt = Utils.getIntInput("Skriv ett heltal");
 
         Random random = new Random();
@@ -40,9 +39,9 @@ public class Main {
                     System.out.printf("\nenter för ett nytt tal, Q för att avsluta");
                 }
         }
+*/
+        //default constructor Foo foo = new Foo();
 
-        //default constructor
-        Foo foo = new Foo();
 
         Bike bike = new Bike("Jopo", 300);
         BikeShop bikeShop = new BikeShop();
@@ -56,8 +55,20 @@ public class Main {
 
         }
 
+        Customer customer;
+        Customer loadedCustomer = (Customer) FileUtils.loadObject("customer.sav");
+        if (loadedCustomer != null) {
+            customer = loadedCustomer;
+        } else {
+            customer = new Customer(1000);
+        }
 
-
+        customer.buyBike(bikeShop.chooseBike());
+        if(customer.getCurrentBike() != null) {
+            System.out.printf("Du köpte en %s, du har %.2f€ kvar",customer.getCurrentBike().getName(),customer.getFunds());
+            FileUtils.saveObject(customer, "customer.sav");
+        }
+/*
         Shirt shirt = new Shirt("Nike", 30,"Blue");
         System.out.println(shirt.getCondition());
 

@@ -12,7 +12,6 @@ public class Utils {
             String intInput = userInput.nextLine();
             try{
                 if(isInteger(intInput)){
-                    System.out.println("Success!");
                     return Integer.parseInt(intInput);
                 }else{
                     throw new NumberFormatException("Bad input");

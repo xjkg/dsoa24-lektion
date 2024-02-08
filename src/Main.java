@@ -11,7 +11,21 @@ public class Main {
     static final double GAME_VERSION = 1.0;
 
     public static void main(String[] args) {
+
+    new BigO();
+    String[] meleeChars = {"Mario", "Luigi","Link","Ganon","Zelda","Marth","Ike","Mewtwo","Pikachu","Mr.Game n' Watch","Captain Falcon","Peach"};
+    StringArray ssbm = new StringArray(meleeChars);
+    System.out.println("ssbm size: "+ssbm.size());
+    System.out.println(ssbm);
+    ssbm.add(0, "Fox");
+    System.out.println(ssbm);
+    ssbm.reverse();
+    System.out.println(ssbm);
+
+
+
 /*
+DSOA BATTLEGAME ERA
         FileUtils.writeTextFile("hello.txt", "hello!");
         String fileContent = FileUtils.readTextFile("hello.txt");
 
@@ -39,8 +53,8 @@ public class Main {
                     System.out.printf("\nenter för ett nytt tal, Q för att avsluta");
                 }
         }
-*/
-        //default constructor Foo foo = new Foo();
+
+        default constructor Foo foo = new Foo();
 
 
         Bike bike = new Bike("Jopo", 300, DiscountCategory.DEMO);
@@ -68,7 +82,7 @@ public class Main {
             System.out.printf("Du köpte en %s, du har %.2f€ kvar",customer.getCurrentBike().getName(),customer.getFunds());
             FileUtils.saveObject(customer, "customer.sav");
         }
-/*
+
         Shirt shirt = new Shirt("Nike", 30,"Blue");
         System.out.println(shirt.getCondition());
 

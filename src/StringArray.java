@@ -49,4 +49,12 @@ public class StringArray {
             end--;
         }
     }
+
+    public String get(int index) {
+        if (index >= 0 && index < values.length) {
+            return values[index];
+        } else {
+            throw new IndexOutOfBoundsException("Index out of bounds");
+        }
+    }
 }

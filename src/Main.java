@@ -12,6 +12,15 @@ public class Main {
 
     public static void main(String[] args) {
     new BigO();
+    String[] weekDays = { "Måndag", "Tisdag", "Onsdag", "Torsdag", "Fredag", "Lördag", "Söndag" };
+    StringArray days = new StringArray(weekDays);
+    int today = 2;
+    int daysahead = 7;
+    int futureindex = (today + daysahead) % days.size();
+    System.out.printf("I dag är det %s\n", days.get(today));
+    System.out.printf("I övermorgon är det %s\n", weekDays[today+2]);
+    System.out.printf("Om %d dagar är det %s\n", daysahead, weekDays[futureindex]);
+    /*
     String[] meleeChars = {"Mario", "Luigi","Link","Ganon","Zelda","Marth","Ike","Mewtwo","Pikachu","Mr.Game n' Watch","Captain Falcon","Peach"};
     StringArray ssbm = new StringArray(meleeChars);
 
@@ -28,7 +37,7 @@ public class Main {
 
 
 
-/*
+
 DSOA BATTLEGAME ERA
         FileUtils.writeTextFile("hello.txt", "hello!");
         String fileContent = FileUtils.readTextFile("hello.txt");

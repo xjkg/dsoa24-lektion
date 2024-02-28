@@ -1,6 +1,7 @@
 import java.util.Arrays;
 
 public class StringArray {
+
     // Vi antar att vi inte har tillgång till ArrayList
 
     String[] values;
@@ -56,5 +57,9 @@ public class StringArray {
         } else {
             throw new IndexOutOfBoundsException("Index out of bounds");
         }
+    }
+
+    public String[] getValues() {
+        return values;
     }
 }
